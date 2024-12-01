@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <xsl:template match="/">
+        <html>
+            <body>
+                <h2 style="color:blue">Cars list</h2>
+                <table border="1">
+                    <tr bgcolor="ceca35">
+                        <th>Vendor</th>
+                        <th>Model</th>
+                        <th>Color</th>
+                        <th>Price</th>
+                        <th>Year</th>
+                        <th>Engine</th>
+                        <th>Doors</th>
+                    </tr>
+                    <xsl:for-each select="vehicles/car">
+                        <tr>
+                            <td><xsl:value-of select="vendor"/></td>
+                            <td><xsl:value-of select="model"/></td>
+                            <td><xsl:value-of select="color"/></td>
+                            <td><xsl:value-of select="price"/></td>
+                            <td><xsl:value-of select="year"/></td>
+                            <td><xsl:value-of select="engine"/></td>
+                            <td><xsl:value-of select="doors"/></td>
+                        </tr>
+                    </xsl:for-each>
+                </table>
+                <h2 style="color:green">Planes list</h2>
+                <table border="1">
+                    <tr bgcolor="ceca35">
+                        <th>Vendor</th>
+                        <th>Model</th>
+                        <th>Color</th>
+                        <th>Price</th>
+                        <th>Year</th>
+                        <th>Engines</th>
+                        <th>Seats</th>
+                    </tr>
+                    <xsl:for-each select="vehicles/plane">
+                        <tr>
+                            <td><xsl:value-of select="vendor"/></td>
+                            <td><xsl:value-of select="model"/></td>
+                            <td><xsl:value-of select="color"/></td>
+                            <td><xsl:value-of select="price"/></td>
+                            <td><xsl:value-of select="year"/></td>
+                            <td><xsl:value-of select="engines"/></td>
+                            <td><xsl:value-of select="seats"/></td>
+                        </tr>
+                    </xsl:for-each>
+                </table>
+                <h2 style="color:red">Boats list</h2>
+                <table border="1">
+                    <tr bgcolor="ceca35">
+                        <th>Vendor</th>
+                        <th>Model</th>
+                        <th>Color</th>
+                        <th>Price</th>
+                        <th>Year</th>
+                        <th>Has motor</th>
+                        <th>Has sail</th>
+                    </tr>
+                    <xsl:for-each select="vehicles/boat">
+                        <tr>
+                            <td><xsl:value-of select="vendor"/></td>
+                            <td><xsl:value-of select="model"/></td>
+                            <td><xsl:value-of select="color"/></td>
+                            <td><xsl:value-of select="price"/></td>
+                            <td><xsl:value-of select="year"/></td>
+                            <td><xsl:value-of select="has_motor"/></td>
+                            <td><xsl:value-of select="has_sail"/></td>
+                        </tr>
+                    </xsl:for-each>
+                </table>
+            </body>
+        </html>
+    </xsl:template>
+</xsl:stylesheet>

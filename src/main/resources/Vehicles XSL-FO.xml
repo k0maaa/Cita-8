@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <fo:layout-master-set>
+        <fo:simple-page-master master-name="A4" page-height="29.7cm" page-width="21cm" margin="2cm">
+            <fo:region-body/>
+        </fo:simple-page-master>
+    </fo:layout-master-set>
+    <fo:page-sequence master-reference="A4">
+        <fo:flow flow-name="xsl-region-body">
+            <fo:block font-size="14pt" font-weight="bold" text-align="center">Cars list</fo:block>
+            <fo:table border="1pt solid black" width="100%">
+                <fo:table-header>
+                    <fo:table-row background-color="#9acd32">
+                        <fo:table-cell><fo:block>Vendor</fo:block></fo:table-cell>
+                        <fo:table-cell><fo:block>Model</fo:block></fo:table-cell>
+                        <fo:table-cell><fo:block>Color</fo:block></fo:table-cell>
+                        <fo:table-cell><fo:block>Price</fo:block></fo:table-cell>
+                        <fo:table-cell><fo:block>Year</fo:block></fo:table-cell>
+                        <fo:table-cell><fo:block>Engine</fo:block></fo:table-cell>
+                        <fo:table-cell><fo:block>Doors</fo:block></fo:table-cell>
+                    </fo:table-row>
+                </fo:table-header>
+                <fo:table-body>
+                    <xsl:for-each select="vehicles/car">
+                        <fo:table-row>
+                            <fo:table-cell><fo:block><xsl:value-of select="vendor"/></fo:block></fo:table-cell>
+                            <fo:table-cell><fo:block><xsl:value-of select="model"/></fo:block></fo:table-cell>
+                            <fo:table-cell><fo:block><xsl:value-of select="color"/></fo:block></fo:table-cell>
+                            <fo:table-cell><fo:block><xsl:value-of select="price"/></fo:block></fo:table-cell>
+                            <fo:table-cell><fo:block><xsl:value-of select="year"/></fo:block></fo:table-cell>
+                            <fo:table-cell><fo:block><xsl:value-of select="engine"/></fo:block></fo:table-cell>
+                            <fo:table-cell><fo:block><xsl:value-of select="doors"/></fo:block></fo:table-cell>
+                        </fo:table-row>
+                    </xsl:for-each>
+                </fo:table-body>
+            </fo:table>
+            <fo:block font-size="14pt" font-weight="bold" text-align="center">Planes list</fo:block>
+            <fo:table border="1pt solid black" width="100%">
+                <fo:table-header>
+                    <fo:table-row background-color="#9acd32">
+                        <fo:table-cell><fo:block>Vendor</fo:block></fo:table-cell>
+                        <fo:table-cell><fo:block>Model</fo:block></fo:table-cell>
+                        <fo:table-cell><fo:block>Color</fo:block></fo:table-cell>
+                        <fo:table-cell><fo:block>Price</fo:block></fo:table-cell>
+                        <fo:table-cell><fo:block>Year</fo:block></fo:table-cell>
+                        <fo:table-cell><fo:block>Engines</fo:block></fo:table-cell>
+                        <fo:table-cell><fo:block>Seats</fo:block></fo:table-cell>
+                    </fo:table-row>
+                </fo:table-header>
+                <fo:table-body>
+                    <xsl:for-each select="vehicles/plane">
+                        <fo:table-row>
+                            <fo:table-cell><fo:block><xsl:value-of select="vendor"/></fo:block></fo:table-cell>
+                            <fo:table-cell><fo:block><xsl:value-of select="model"/></fo:block></fo:table-cell>
+                            <fo:table-cell><fo:block><xsl:value-of select="color"/></fo:block></fo:table-cell>
+                            <fo:table-cell><fo:block><xsl:value-of select="price"/></fo:block></fo:table-cell>
+                            <fo:table-cell><fo:block><xsl:value-of select="year"/></fo:block></fo:table-cell>
+                            <fo:table-cell><fo:block><xsl:value-of select="engines"/></fo:block></fo:table-cell>
+                            <fo:table-cell><fo:block><xsl:value-of select="seats"/></fo:block></fo:table-cell>
+                        </fo:table-row>
+                    </xsl:for-each>
+                </fo:table-body>
+            </fo:table>
+            <fo:block font-size="14pt" font-weight="bold" text-align="center">Boats list</fo:block>
+            <fo:table border="1pt solid black" width="100%">
+                <fo:table-header>
+                    <fo:table-row background-color="#9acd32">
+                        <fo:table-cell><fo:block>Vendor</fo:block></fo:table-cell>
+                        <fo:table-cell><fo:block>Model</fo:block></fo:table-cell>
+                        <fo:table-cell><fo:block>Color</fo:block></fo:table-cell>
+                        <fo:table-cell><fo:block>Price</fo:block></fo:table-cell>
+                        <fo:table-cell><fo:block>Year</fo:block></fo:table-cell>
+                        <fo:table-cell><fo:block>Has motor</fo:block></fo:table-cell>
+                        <fo:table-cell><fo:block>Has sail</fo:block></fo:table-cell>
+                    </fo:table-row>
+                </fo:table-header>
+                <fo:table-body>
+                    <xsl:for-each select="vehicles/boat">
+                        <fo:table-row>
+                            <fo:table-cell><fo:block><xsl:value-of select="vendor"/></fo:block></fo:table-cell>
+                            <fo:table-cell><fo:block><xsl:value-of select="model"/></fo:block></fo:table-cell>
+                            <fo:table-cell><fo:block><xsl:value-of select="color"/></fo:block></fo:table-cell>
+                            <fo:table-cell><fo:block><xsl:value-of select="price"/></fo:block></fo:table-cell>
+                            <fo:table-cell><fo:block><xsl:value-of select="year"/></fo:block></fo:table-cell>
+                            <fo:table-cell><fo:block><xsl:value-of select="has_motor"/></fo:block></fo:table-cell>
+                            <fo:table-cell><fo:block><xsl:value-of select="has_sail"/></fo:block></fo:table-cell>
+                        </fo:table-row>
+                    </xsl:for-each>
+                </fo:table-body>
+            </fo:table>
+        </fo:flow>
+    </fo:page-sequence>
+</fo:root>
